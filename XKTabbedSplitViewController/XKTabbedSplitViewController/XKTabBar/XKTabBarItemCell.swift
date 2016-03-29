@@ -47,6 +47,7 @@ class XKTabBarItemCell: UITableViewCell {
         self.addSubview(titleLabel!)
         
         aSelectedColor = UIColor(white: 0.85, alpha: 1.0)
+        aSelectedImage = UIImage()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -72,7 +73,7 @@ class XKTabBarItemCell: UITableViewCell {
         viewBackground!.backgroundColor = highlighted ? aSelectedColor : UIColor.clearColor()
         
         if (isFirstCell) {
-            topSeparator!.hidden = highlighted ? true : false
+            topSeparator?.hidden = highlighted ? true : false
         }
         
         iconView!.image = highlighted ? aSelectedImage : aImage
@@ -86,7 +87,7 @@ class XKTabBarItemCell: UITableViewCell {
         
         if (isFirstCell) {
             
-            topSeparator!.hidden = selected ? true : false
+            topSeparator?.hidden = selected ? true : false
         }
     
         iconView!.image = selected ? aSelectedImage : aImage

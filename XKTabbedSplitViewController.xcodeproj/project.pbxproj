@@ -10,10 +10,17 @@
 		AF26343D1C15772800651F09 /* XKTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF26343C1C15772800651F09 /* XKTabBar.swift */; };
 		AF3D0C0E1BF6C957003610A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D0C0D1BF6C957003610A3 /* AppDelegate.swift */; };
 		AF3D0C101BF6C957003610A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D0C0F1BF6C957003610A3 /* ViewController.swift */; };
-		AF3D0C131BF6C957003610A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3D0C111BF6C957003610A3 /* Main.storyboard */; };
 		AF3D0C151BF6C957003610A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF3D0C141BF6C957003610A3 /* Assets.xcassets */; };
 		AF3D0C181BF6C957003610A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3D0C161BF6C957003610A3 /* LaunchScreen.storyboard */; };
 		AF3D0C241BF6CD4D003610A3 /* XKTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D0C231BF6CD4D003610A3 /* XKTabBarItem.swift */; };
+		AF91231D1CA4DB520097FF5C /* XKDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF91231C1CA4DB520097FF5C /* XKDetailViewController.swift */; };
+		AF91231F1CA4E74F0097FF5C /* XKMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF91231E1CA4E74F0097FF5C /* XKMasterViewController.swift */; };
+		AFBCFF621CA8CACF0093A366 /* XKTabbedSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBCFF611CA8CACF0093A366 /* XKTabbedSplitViewController.swift */; };
+		AFCAE2551CA9279D00B3BE88 /* FatherTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCAE2541CA9279D00B3BE88 /* FatherTableViewController.swift */; };
+		AFCAE2571CA9291100B3BE88 /* TabbarVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCAE2561CA9291100B3BE88 /* TabbarVC1.swift */; };
+		AFCAE2591CA9294200B3BE88 /* TabBarVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCAE2581CA9294200B3BE88 /* TabBarVC2.swift */; };
+		AFCAE25B1CA9294D00B3BE88 /* TabBarVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCAE25A1CA9294D00B3BE88 /* TabBarVC3.swift */; };
+		AFCAE25D1CA9295800B3BE88 /* TabBarVC4.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCAE25C1CA9295800B3BE88 /* TabBarVC4.swift */; };
 		AFE835451C12E99400BE0F04 /* XKTabBarItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE835441C12E99400BE0F04 /* XKTabBarItemCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -22,11 +29,18 @@
 		AF3D0C0A1BF6C957003610A3 /* XKTabbedSplitViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XKTabbedSplitViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3D0C0D1BF6C957003610A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF3D0C0F1BF6C957003610A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AF3D0C121BF6C957003610A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF3D0C141BF6C957003610A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF3D0C171BF6C957003610A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF3D0C191BF6C957003610A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF3D0C231BF6CD4D003610A3 /* XKTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XKTabBarItem.swift; sourceTree = "<group>"; };
+		AF91231C1CA4DB520097FF5C /* XKDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XKDetailViewController.swift; sourceTree = "<group>"; };
+		AF91231E1CA4E74F0097FF5C /* XKMasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XKMasterViewController.swift; sourceTree = "<group>"; };
+		AFBCFF611CA8CACF0093A366 /* XKTabbedSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XKTabbedSplitViewController.swift; sourceTree = "<group>"; };
+		AFCAE2541CA9279D00B3BE88 /* FatherTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FatherTableViewController.swift; sourceTree = "<group>"; };
+		AFCAE2561CA9291100B3BE88 /* TabbarVC1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarVC1.swift; sourceTree = "<group>"; };
+		AFCAE2581CA9294200B3BE88 /* TabBarVC2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarVC2.swift; sourceTree = "<group>"; };
+		AFCAE25A1CA9294D00B3BE88 /* TabBarVC3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarVC3.swift; sourceTree = "<group>"; };
+		AFCAE25C1CA9295800B3BE88 /* TabBarVC4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarVC4.swift; sourceTree = "<group>"; };
 		AFE835441C12E99400BE0F04 /* XKTabBarItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XKTabBarItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,7 +76,7 @@
 			children = (
 				AF3D0C0D1BF6C957003610A3 /* AppDelegate.swift */,
 				AF3D0C0F1BF6C957003610A3 /* ViewController.swift */,
-				AF3D0C111BF6C957003610A3 /* Main.storyboard */,
+				AFCAE2531CA9272700B3BE88 /* Tabs */,
 				AF3D0C1F1BF6CCEC003610A3 /* XKTabbedSplitViewController */,
 				AF3D0C141BF6C957003610A3 /* Assets.xcassets */,
 				AF3D0C161BF6C957003610A3 /* LaunchScreen.storyboard */,
@@ -74,7 +88,9 @@
 		AF3D0C1F1BF6CCEC003610A3 /* XKTabbedSplitViewController */ = {
 			isa = PBXGroup;
 			children = (
+				AF91231B1CA4DB2F0097FF5C /* XKViewControllwe */,
 				AF3D0C201BF6CD13003610A3 /* XKTabBar */,
+				AFBCFF611CA8CACF0093A366 /* XKTabbedSplitViewController.swift */,
 			);
 			path = XKTabbedSplitViewController;
 			sourceTree = "<group>";
@@ -87,6 +103,27 @@
 				AFE835441C12E99400BE0F04 /* XKTabBarItemCell.swift */,
 			);
 			path = XKTabBar;
+			sourceTree = "<group>";
+		};
+		AF91231B1CA4DB2F0097FF5C /* XKViewControllwe */ = {
+			isa = PBXGroup;
+			children = (
+				AF91231C1CA4DB520097FF5C /* XKDetailViewController.swift */,
+				AF91231E1CA4E74F0097FF5C /* XKMasterViewController.swift */,
+			);
+			path = XKViewControllwe;
+			sourceTree = "<group>";
+		};
+		AFCAE2531CA9272700B3BE88 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				AFCAE2541CA9279D00B3BE88 /* FatherTableViewController.swift */,
+				AFCAE2561CA9291100B3BE88 /* TabbarVC1.swift */,
+				AFCAE2581CA9294200B3BE88 /* TabBarVC2.swift */,
+				AFCAE25A1CA9294D00B3BE88 /* TabBarVC3.swift */,
+				AFCAE25C1CA9295800B3BE88 /* TabBarVC4.swift */,
+			);
+			path = Tabs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,7 +187,6 @@
 			files = (
 				AF3D0C181BF6C957003610A3 /* LaunchScreen.storyboard in Resources */,
 				AF3D0C151BF6C957003610A3 /* Assets.xcassets in Resources */,
-				AF3D0C131BF6C957003610A3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,8 +197,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFCAE2571CA9291100B3BE88 /* TabbarVC1.swift in Sources */,
 				AF26343D1C15772800651F09 /* XKTabBar.swift in Sources */,
+				AFCAE25B1CA9294D00B3BE88 /* TabBarVC3.swift in Sources */,
+				AFCAE2591CA9294200B3BE88 /* TabBarVC2.swift in Sources */,
 				AF3D0C241BF6CD4D003610A3 /* XKTabBarItem.swift in Sources */,
+				AFCAE25D1CA9295800B3BE88 /* TabBarVC4.swift in Sources */,
+				AF91231F1CA4E74F0097FF5C /* XKMasterViewController.swift in Sources */,
+				AF91231D1CA4DB520097FF5C /* XKDetailViewController.swift in Sources */,
+				AFBCFF621CA8CACF0093A366 /* XKTabbedSplitViewController.swift in Sources */,
+				AFCAE2551CA9279D00B3BE88 /* FatherTableViewController.swift in Sources */,
 				AF3D0C101BF6C957003610A3 /* ViewController.swift in Sources */,
 				AF3D0C0E1BF6C957003610A3 /* AppDelegate.swift in Sources */,
 				AFE835451C12E99400BE0F04 /* XKTabBarItemCell.swift in Sources */,
@@ -172,14 +216,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AF3D0C111BF6C957003610A3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AF3D0C121BF6C957003610A3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AF3D0C161BF6C957003610A3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

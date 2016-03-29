@@ -13,10 +13,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    let vc: ViewController? = ViewController()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        window!.rootViewController = createVC()
+        window!.makeKeyAndVisible()
+        
         // Override point for customization after application launch.
         return true
+    }
+    
+    func createVC() -> ViewController {
+    
+        let tb1 = XKTabBarItem(vc: TabbarVC1(), image: nil, selectedImage: nil, title: "tb1")
+        let tb2 = XKTabBarItem(vc: TabBarVC2(), image: nil, selectedImage: nil, title: "tb2")
+        let tb3 = XKTabBarItem(vc: TabBarVC3(), image: nil, selectedImage: nil, title: "tb3")
+        let tb4 = XKTabBarItem(vc: TabBarVC4(), image: nil, selectedImage: nil, title: "tb4")
+        
+        vc!.tabsViewControllers = [tb1, tb2, tb3, tb4]
+        
+        return vc!
     }
 
     func applicationWillResignActive(application: UIApplication) {

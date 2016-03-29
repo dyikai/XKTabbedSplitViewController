@@ -20,19 +20,38 @@ let tabItemHeight:Int = 106
 class XKTabBar: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var backgroundImage:UIImage?
-    var tabsButtons:Array<XKTabBarItem>?
+    
+    var _tabsButtons:Array<XKTabBarItem>?
+    var tabsButtons:Array<XKTabBarItem>? {
+        
+        set {
+            _tabsButtons = newValue
+            tabsInit(_tabsButtons!)
+        }
+        
+        get {
+            
+            if _tabsButtons == nil {
+                
+                return nil
+            } else {
+                return _tabsButtons
+            }
+        }
+    }
+    
     var delegate:XKTabBarDelegate?
     var selectedTabIndex:Int?
     
     private var tabsButtonsHeight:Int?
-    private var selectedTab:NSIndexPath?
+    private var selectedTab:NSIndexPath = NSIndexPath()
     
     private var tabsTable:UITableView?
     
-    private let tabsButtonsFrame:CGRect?
+    private var tabsButtonsFrame:CGRect?
     
     init() {
-        super.init(nibName: "", bundle: nil)
+        super.init(nibName: nil, bundle: nil)
         
         self.view.clipsToBounds = true
         self.view.backgroundColor = UIColor(red: randomColorValue(), green: randomColorValue(), blue: randomColorValue(), alpha: 1)
@@ -42,17 +61,18 @@ class XKTabBar: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     private func tabsInit(tabs:[XKTabBarItem]) {
-    
-        var tmpItems:Array<XKTabBarItem>?
         
-        for obj in tabs {
+//        let tmpItems = tabs
+        
+        let count = tabs.count
+        
+        for _ in 0 ..< count {
             
             tabsButtonsHeight! += tabItemHeight
             
-            tmpItems!.append(obj)
         }
         
-        tabsButtons = tmpItems;
+//        tabsButtons = tabs;
         
         tabsTable = UITableView(frame: tabsButtonsFrame!, style: UITableViewStyle.Plain)
         tabsTable!.scrollEnabled = true
@@ -68,7 +88,7 @@ class XKTabBar: UIViewController, UITableViewDataSource, UITableViewDelegate {
             let firstTab = NSIndexPath(forRow: 0, inSection: 0)
             selectedTabIndex = firstTab.row
             tabsTable!.selectRowAtIndexPath(firstTab, animated: true, scrollPosition: UITableViewScrollPosition.None)
-//            tableView(tabsTable!, didSelectRowAtIndexPath: firstTab)
+            tableView(tabsTable!, didSelectRowAtIndexPath: firstTab)
         }
     }
     
@@ -81,7 +101,25 @@ class XKTabBar: UIViewController, UITableViewDataSource, UITableViewDelegate {
         return CGFloat(Double(arc4random_uniform(255)) / 255)
     }
     
-    //MARK:
+    //MARK: ViewController Lifecycle
+    override func viewWillLayoutSubviews() {
+        
+        super.viewWillLayoutSubviews()
+        
+        self.view.frame = CGRectMake(0, 85, CGFloat(tabBarWidth), self.view.bounds.size.height)
+        
+        if tabsTable != nil {
+            
+            tabsTable!.frame = tabsButtonsFrame!
+        }
+        
+        if Float(UIDevice.currentDevice().systemVersion) >= 8.0 {
+            
+//            tabsTable!.selectRowAtIndexPath(NSIndexPath(forRow: selectedTabIndex!, inSection: 0), animated: false, scrollPosition: UITableViewScrollPosition.None)
+        }
+    }
+    
+    //MARK: UITableViewDataSource/Delegate
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return tabsButtons!.count
@@ -115,6 +153,23 @@ class XKTabBar: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        if (!(selectedTab!.isEqual(<#T##object: AnyObject?##AnyObject?#>)))
+        if (!(selectedTab.isEqual(indexPath))) {
+            
+            selectedTab = indexPath
+            selectedTabIndex = indexPath.row
+            let cell: XKTabBarItemCell = tableView.cellForRowAtIndexPath(indexPath) as! XKTabBarItemCell
+            self.delegate!.tabBarAndSelectedViewController(self, vc: cell.viewController!)
+        }
+    }
+    
+    // MARK: Autototate iOS 6.0 +
+    override func shouldAutorotate() -> Bool {
+        
+        return true;
+    }
+    
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        
+        return UIInterfaceOrientationMask.All;
     }
 }
