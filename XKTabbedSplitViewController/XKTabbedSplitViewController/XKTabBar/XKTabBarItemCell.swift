@@ -40,6 +40,7 @@ class XKTabBarItemCell: UITableViewCell {
         self.addSubview(iconView!)
         
         titleLabel = UILabel()
+        titleLabel!.text = "dyk"
         titleLabel!.textAlignment = NSTextAlignment.Center
         titleLabel!.backgroundColor = UIColor.clearColor()
         titleLabel!.font = UIFont.boldSystemFontOfSize(17)

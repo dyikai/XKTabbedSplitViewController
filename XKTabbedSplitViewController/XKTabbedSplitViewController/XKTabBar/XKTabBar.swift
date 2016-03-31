@@ -12,10 +12,10 @@ protocol XKTabBarDelegate: NSObjectProtocol {
     func tabBarAndSelectedViewController(tabBar: XKTabBar, vc: UIViewController)
 }
 
-let iOS_7 = Double(UIDevice.currentDevice().systemVersion) >= 7.0
+let iOS_7 = Double(UIDevice.currentDevice().systemVersion) >= 8.0
 
-let tabBarWidth:Int = 96
-let tabItemHeight:Int = 106
+let tabBarWidth:Int = 114
+let tabItemHeight:Int = 85
 
 class XKTabBar: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -56,7 +56,7 @@ class XKTabBar: UIViewController, UITableViewDataSource, UITableViewDelegate {
         self.view.clipsToBounds = true
         self.view.backgroundColor = UIColor(red: randomColorValue(), green: randomColorValue(), blue: randomColorValue(), alpha: 1)
         
-        tabsButtonsHeight = 0;
+        tabsButtonsHeight = 85;
         tabsButtonsFrame = CGRect(x: 0, y: 0, width: CGFloat(tabBarWidth), height: CGFloat(tabsButtonsHeight!));
     }
     

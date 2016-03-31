@@ -19,6 +19,7 @@ class FatherTableViewController: UITableViewController {
         self.view.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
         
         self.tableView.scrollEnabled = false
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
